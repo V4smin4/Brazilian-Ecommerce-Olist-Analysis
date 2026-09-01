@@ -16,7 +16,7 @@ Oracle Database, SQL Developer, SQL, Python, Pandas, Matplotlib, Jupyter Noteboo
 
 ## Database
 
-Nine tables built from the original datasets, with primary and foreign key constraints enforcing the relationships between entities. See the [ER diagram](Database/Schema/ER_Diagram.png) for the full schema.
+Nine tables built from the original datasets, with primary and foreign key constraints enforcing the relationships between entities. See the [ER diagram](database/SQL/Schema/ER_Diagram.png) for the full schema.
 
 | Table | Rows |
 |---|---:|
