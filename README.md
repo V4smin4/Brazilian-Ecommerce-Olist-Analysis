@@ -16,7 +16,7 @@ Oracle Database, SQL Developer, SQL, Python, Pandas, Matplotlib, Jupyter Noteboo
 
 ## Database
 
-Nine tables built from the original datasets, with primary and foreign key constraints enforcing the relationships between entities.
+Nine tables built from the original datasets, with primary and foreign key constraints enforcing the relationships between entities. See the [ER diagram](Database/Schema/ER_Diagram.png) for the full schema.
 
 | Table | Rows |
 |---|---:|
@@ -40,6 +40,8 @@ Raw CSV Files
 Database Design
       ↓
 Oracle Database
+      ↓
+Data Validation
       ↓
 SQL Analysis
       ↓
@@ -70,10 +72,13 @@ Full findings in [`docs/insights.md`](docs/insights.md).
 Brazilian-Ecommerce-Olist-Analysis/
 ├── README.md
 ├── Database/
-│   └── SQL/
-│       ├── 01_create_tables.sql
-│       ├── 02_views.sql
-│       └── 03_analysis_queries.sql
+│   ├── SQL/
+│   │   ├── 01_create_tables.sql
+│   │   ├── 02_views.sql
+│   │   ├── 03_analysis_queries.sql
+│   │   └── 04_validation.sql
+│   └── Schema/
+│       └── ER_Diagram.png
 ├── notebook/
 │   └── Olist_Data_Analysis.ipynb
 ├── screenshots/
