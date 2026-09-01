@@ -1,0 +1,16 @@
+SELECT 'CUSTOMERS' tbl, COUNT(*) rows_count FROM CUSTOMERS
+UNION ALL SELECT 'ORDERS', COUNT(*) FROM ORDERS
+UNION ALL SELECT 'ORDER_ITEMS', COUNT(*) FROM ORDER_ITEMS
+UNION ALL SELECT 'PRODUCTS', COUNT(*) FROM PRODUCTS
+UNION ALL SELECT 'SELLERS', COUNT(*) FROM SELLERS
+UNION ALL SELECT 'ORDER_PAYMENTS', COUNT(*) FROM ORDER_PAYMENTS
+UNION ALL SELECT 'ORDER_REVIEWS', COUNT(*) FROM ORDER_REVIEWS
+UNION ALL SELECT 'GEOLOCATION', COUNT(*) FROM GEOLOCATION
+UNION ALL SELECT 'CATEGORY_TRASLATION', COUNT(*) FROM CATEGORY_TRASLATION;
+
+SELECT a.table_name, a.constraint_name, c.column_name, c_pk.table_name r_table_name
+FROM user_constraints a
+JOIN user_cons_columns c ON a.constraint_name = c.constraint_name
+JOIN user_constraints c_pk ON a.r_constraint_name = c_pk.constraint_name
+WHERE a.constraint_type = 'R'
+ORDER BY a.table_name;
